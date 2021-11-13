@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-portfolio-tsx",
+    "path": "/portfolio/",
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<p>끊임없는 성장을 이뤄나가는 <strong>Frontend</strong> <strong>개발자</strong> 손호영입니다.<br>\n기억과 학습은 <strong>꾸준함</strong>이 중요하다고 생각하여 매일 <strong>기록</strong>하고 일기를 써나갑니다.<br>\n분야를 가리지 않고 학습하며 개발에 대한 관심사를 넓혀나갑니다.<br>\n한 곳에 안주하지 않도록 스스로 새로운 과제를 내어줌으로써 <strong>발전</strong>해 나아갑니다.<br>\n다양한 교육을 통해 <strong>협업</strong> 경험과 <strong>실무</strong> 능력을 쌓았습니다.<br>\n협업에 필요한 <strong>클린 코드</strong> 작성에 대해 고민합니다.<br>\n<strong>재사용</strong> 가능한 <strong>구성요소</strong>를 만드는 데 관심이 있습니다.</p>","frontmatter":{"title":"about","date":"2021-11-10"}}}]},"site":{"siteMetadata":{"title_portfolio":"Developer Hoyoung's portfolio","description":"꾸준함이라는 덕목이 최고의 미덕이라고 생각하는 주니어 개발자입니다.","siteUrl_portfolio":"https://17-sss.github.io/portfolio"}},"profileImg":{"publicURL":"/static/bcf90d7ee3fca418f08f89465e9e53d5/profile-image.jpeg"}},"pageContext":{}},
+    "staticQueryHashes": []}

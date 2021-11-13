@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-tsx",
+    "path": "/2021-06-09-TIL/",
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<h2>🚀 Today I Learned (2021.06.09)</h2>\n<br/>\n<h3><strong>👨‍💻 오늘의 알고리즘</strong></h3>\n<ul>\n<li><a href=\"https://17-sss.github.io/2021-06-09-Basic_Calculator_II\" target=\"_blank\" rel=\"nofollow\">[Algorithm] LeetCode : Basic Calculator II</a></li>\n</ul>\n<br/>\n<h3><strong>😆 오늘 뭐했어?</strong></h3>\n<ul>\n<li>오늘 오전에는 알고리즘 강의.<br>\n근데 하나도 못 알아듣겠고..<br>\n오후에는 API 추가 회의하고<br>\n열시미 팔레트 만들고 정리하다가 하루 끝</li>\n</ul>\n<br/>\n<h3><strong>✍️ 회고</strong></h3>\n<ul>\n<li>오늘도 재미있었다<br>\n뭔가 속도가 난 느린 기분이지만<br>\n저번처럼 멘탈 나가긴 싫으니까<br>\n천천히 하는 걸루!!</li>\n</ul>","frontmatter":{"title":"[TIL] 2021-06-09","summary":null,"date":"2021.06.09.","categories":["TIL"],"options":null,"thumbnail":null}}}]}},"pageContext":{"slug":"/2021-06-09-TIL/"}},
+    "staticQueryHashes": []}

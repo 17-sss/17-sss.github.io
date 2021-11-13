@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-template-tsx",
+    "path": "/2021-07-21-TIL/",
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<h2>🚀 Today I Learned (2021.07.21)</h2>\n<h3><strong>👨‍💻 오늘의 알고리즘</strong></h3>\n<ul>\n<li>없음</li>\n</ul>\n<h3><strong>✍️ 회고</strong></h3>\n<ul>\n<li>오늘도 아침에는 알고리즘 1문제를 간단하게 풀고<br>\n나머지 시간은 부캠…<br>\n그리고 저녁에 Hi-Fi 프로젝트 회의. FE만<br>\n지라에서의 프로젝트 관리 스타일을 정해야했었는데 (스크럼 or 칸반)<br>\n팀원분이 설문지를 만들어오셔서 체크해보니<br>\n대다수가 스크럼으로.. 스크럼으로 결정!<br>\n애자일에 대하여 좀 더 찾아보고<br>\nPR 템플릿도 신기했어서 PR 템플릿에<br>\n뭐가 들어가면 좋을지 의논하고 만들고<br>\n지라 &#x26; 컨플루언스 직접 써보면서 적응<br>\n역할도 정하고 커밋 컨벤션도 정하고<br>\n백로그도 적고 하루 끝</li>\n<li>오늘도 하루가 어찌저찌 지나갔다<br>\n근데 너무 힘들다<br>\n해야할게 넘치는건 좋지만<br>\n이건 좀.. ㅠ<br>\n자는 시간빼고 다 코딩이네<br>\n그래도 이력서도 수정하고 입사지원도 좀 하자..!<br>\n오늘도 고생했고 내일은 더 나아질꺼니까</li>\n</ul>","frontmatter":{"title":"[TIL] 2021-07-21","summary":null,"date":"2021.07.21.","categories":["TIL"],"options":null,"thumbnail":null}}}]}},"pageContext":{"slug":"/2021-07-21-TIL/"}},
+    "staticQueryHashes": []}

@@ -1,0 +1,532 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.e53586a225ffdde20c86.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><meta name="generator" content="Gatsby 4.0.1"/><style id="jss-server-side"></style><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link rel="canonical" href="https://17-sss.github.io/2021-07-15-CRA없이_React_+_TypeScript_환경_만들기_(feat._Webpack)/" data-baseprotocol="https:" data-basehost="17-sss.github.io"/><title data-react-helmet="true">[Webpack] CRA없이 React + TypeScript 환경 만들기 (feat. Webpack)</title><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="[Webpack] CRA없이 React + TypeScript 환경 만들기 (feat. Webpack)"/><meta data-react-helmet="true" property="og:description" content=""/><meta data-react-helmet="true" property="og:image" content="/static/ab95f9865c9e7ce1b71a48f21be91791/background_webpack.png"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="[Webpack] CRA없이 React + TypeScript 환경 만들기 (feat. Webpack)"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="[Webpack] CRA없이 React + TypeScript 환경 만들기 (feat. Webpack)"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="/static/ab95f9865c9e7ce1b71a48f21be91791/background_webpack.png"/><meta data-react-helmet="true" name="twitter:site" content="@17-sss"/><meta data-react-helmet="true" name="twitter:creator" content="@17-sss"/><meta data-react-helmet="true" name="google-site-verification" content="EnJH07IqCza2RRsk3dnbayCSB08fnsvqpMhawDSsOFU"/><meta data-react-helmet="true" name="naver-site-verification" content="e2504342f5b1a3a3a9360c2ca831fa1881e6e5b6"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-962e71be92dae23c33c4.js"/><link as="script" rel="preload" href="/framework-094b0089736b8f621f0d.js"/><link as="script" rel="preload" href="/app-9608503186c9235ba761.js"/><link as="script" rel="preload" href="/cb1608f2-3d1f96b69f7c4498694b.js"/><link as="script" rel="preload" href="/2a6c602b4f9286cd2f42133197642c424ddcc25e-989cf3506fe2b8c48925.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-76aae048854278359189.js"/><link as="fetch" rel="preload" href="/page-data/2021-07-15-CRA없이_React_+_TypeScript_환경_만들기_(feat._Webpack)/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1eg09uj0"><style data-emotion="css-global 2kcqah">@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp ex6076l1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo ex6076l0"><div style="max-width:400px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;400&#x27; width=&#x27;400&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAADEklEQVQ4y5VVW2sTURAO9UFRsXjD/+DlF4iPIiq0DyKKIoLgkxa84INYwQtoqyBoLUprFUVUtFLSatXaKKLFis1l47Wa3pKYtGDXYm2a3XPO98nZbNJtYkUXhnw7Z+bLzHDmW5+v6CE5zSQwK4+VB+dtxscbNCGgf73Ji13Lv89yY0qJi/+RZFlWokzjh0mp33dJIKmApMZ94zkiKxdTVlKxp7XiqtaSfGOYioGUYGdKMGoqkux2zwrVSoVSQmvKuZxk89AvxeZBwSPBrLg7KNSdAaE0vj8omPjlEDe7sbpaJxeAzzu3BSTPpiaU3Z4UrIla6njEkjcGgK6U5dj1AUD7aqOWepQUTGeUrXNyuShUmG+zckKAgZTk6aglLnwS0LipO43Vta+x5kw3rr1JozMlef6TjZqoJZ6lJTMCutrKfPteworIqOTNPlsaP4DI8CQq63swe88TLjv03DGNN10KwhiZRMRUuBmzpTvXCrfl6YRRU/JIyFJtcYHGF0Os9n/l+roeLtwf4KIDAW68GHR8TS/j9McFqkOWev9jirCkQk14ImKptoTAhroerjrRxdon/az2f+FR/1fWPO7niuOvWFEfZGtC4qTxH4RbGsIs39fJuVVPHcLDLb0O1r5tTQZb4wI69q+E70xJ3UZbQmLz5RDn7H3KJQefcXuTwa1XIg6es7eD2xrD9McljoYs9eFvhMHvkpc+21IP/MHnMey4amBeVQe3XjG4uSHC+VUd3HnNQHvvGMKmgo4Nj8oZCSvHLPDViOSFj5ao75UIDIMNr9M43R7DqfYYGruHHd/FXom6j7boGpHUOcXXxrnppoVykueGMxCt8dzFPha2ZGNMITyqEBpVaIgpaJ8+a0sIjkxC6Bwzi/KsxNSmCAXfuF1YvZUkWwbHFe8NCFYHs+J2v1C3+oTSWK/jUG71WtxY308bDse0XXYdXnFYR/KtnpHeDi0OhunM6617VhAH8Sdx8MpXRsArS7sl8E2bxnn/5B/ky2nZq4vISZgvUyqwS10rVOXGFHL+SbmLPwFePBPRb8kZo9gxJ8drAAAAAElFTkSuQmCC" alt=""/><picture><source type="image/webp" data-srcset="/static/ab95f9865c9e7ce1b71a48f21be91791/e64f1/background_webpack.webp 100w,/static/ab95f9865c9e7ce1b71a48f21be91791/8b00d/background_webpack.webp 200w,/static/ab95f9865c9e7ce1b71a48f21be91791/9c0a1/background_webpack.webp 400w" sizes="(min-width: 400px) 400px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 400px) 400px, 100vw" decoding="async" loading="lazy" data-src="/static/ab95f9865c9e7ce1b71a48f21be91791/5f2c3/background_webpack.png" data-srcset="/static/ab95f9865c9e7ce1b71a48f21be91791/90cd3/background_webpack.png 100w,/static/ab95f9865c9e7ce1b71a48f21be91791/614dc/background_webpack.png 200w,/static/ab95f9865c9e7ce1b71a48f21be91791/5f2c3/background_webpack.png 400w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/ab95f9865c9e7ce1b71a48f21be91791/e64f1/background_webpack.webp 100w,/static/ab95f9865c9e7ce1b71a48f21be91791/8b00d/background_webpack.webp 200w,/static/ab95f9865c9e7ce1b71a48f21be91791/9c0a1/background_webpack.webp 400w" sizes="(min-width: 400px) 400px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 400px) 400px, 100vw" decoding="async" loading="lazy" src="/static/ab95f9865c9e7ce1b71a48f21be91791/5f2c3/background_webpack.png" srcSet="/static/ab95f9865c9e7ce1b71a48f21be91791/90cd3/background_webpack.png 100w,/static/ab95f9865c9e7ce1b71a48f21be91791/614dc/background_webpack.png 200w,/static/ab95f9865c9e7ce1b71a48f21be91791/5f2c3/background_webpack.png 400w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e18o2tdp3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e18o2tdp2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e18o2tdp1">[Webpack] CRA없이 React + TypeScript 환경 만들기 (feat. Webpack)</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e18o2tdp0"><div>JavaScript / Webpack</div><div>2021.07.15.</div></div></div></div><style data-emotion="css n3hsxm">.css-n3hsxm{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:40px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-n3hsxm p{padding:3px 0;}.css-n3hsxm strong{font-weight:900;}.css-n3hsxm h1,.css-n3hsxm h2,.css-n3hsxm h3{font-weight:800;margin-bottom:12px;}.css-n3hsxm hr+h1,.css-n3hsxm hr+h2,.css-n3hsxm hr+h3{margin-top:0;}.css-n3hsxm *+h1,.css-n3hsxm *+h2,.css-n3hsxm *+h3{margin-top:36px;}.css-n3hsxm h1{font-size:30px;}.css-n3hsxm h2{font-size:25px;}.css-n3hsxm h3{font-size:20px;}.css-n3hsxm blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-n3hsxm ol,.css-n3hsxm ul{margin-left:20px;padding:8px 0;}.css-n3hsxm hr{border:none;box-shadow:0 0 0 0.1px #000;margin:30px 0;}.css-n3hsxm a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-n3hsxm pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-n3hsxm pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-n3hsxm pre[class*='language-'] *{font-family:'Roboto','Noto Sans KR',system-ui,Apple SD Gothic Neo,AppleGothic,'Nanum Myeongjo',sans-serif,serif;}.css-n3hsxm code[class*='language-'],.css-n3hsxm pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-n3hsxm{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-n3hsxm h1{font-size:23px;}.css-n3hsxm h2{font-size:20px;}.css-n3hsxm h3{font-size:17px;}.css-n3hsxm img{width:100%;}.css-n3hsxm hr{margin:50px 0;}}</style><div class="css-n3hsxm e1iovc3b0"><h1>CRA없이 React + TypeScript 환경 만들기 (feat. Webpack)</h1>
+<p>코드스쿼드 과정에서 분명 만들었었는데 난 이해를 못했어서 정리!<br>
+보일러플레이트 다시 만들어보며 메모</p>
+<h2><strong>[1]</strong> 일반 (Normal : No webpack-dev-server)</h2>
+<h3>1. 폴더 생성 및 기본 설정</h3>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"># webpack-react-typescript-boilerplate이란 이름을 가진 폴더 생성
+mkdir webpack-react-typescript-boilerplate
+
+# 생성한 webpack-react-typescript-boilerplate로 이동
+cd webpack-react-typescript-boilerplate
+
+# package.json 생성 (-y를 사용하여 바로 생성)
+npm init -y
+
+# react, react-dom 패키지 설치
+npm i react react-dom
+
+# 개발전용으로 패키지 설치
+## 설치목록: typescript, ts-loader, webpack, webpack-cli, @types/react, @types/react-dom, @types/webpack
+npm i --save-dev typescript ts-loader webpack webpack-cli @types/react @types/react-dom @types/webpack</code></pre></div>
+<p><strong>1)</strong> 생성된 <code class="language-text">package.json</code></p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"webpack-react-typescript-boilerplate"</span><span class="token punctuation">,</span>
+  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"0.1.0"</span><span class="token punctuation">,</span>
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"webpack"</span><span class="token punctuation">,</span>
+    <span class="token property">"production"</span><span class="token operator">:</span> <span class="token string">"NODE_ENV=production webpack --progress"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"repository"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"git"</span><span class="token punctuation">,</span>
+    <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"git+https://github.com/17-sss/webpack-react-typescript-boilerplate.git"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"keywords"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"license"</span><span class="token operator">:</span> <span class="token string">"ISC"</span><span class="token punctuation">,</span>
+  <span class="token property">"bugs"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://github.com/17-sss/webpack-react-typescript-boilerplate/issues"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"homepage"</span><span class="token operator">:</span> <span class="token string">"https://github.com/17-sss/webpack-react-typescript-boilerplate#readme"</span><span class="token punctuation">,</span>
+  <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"devDependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"@types/react"</span><span class="token operator">:</span> <span class="token string">"^17.0.14"</span><span class="token punctuation">,</span>
+    <span class="token property">"@types/react-dom"</span><span class="token operator">:</span> <span class="token string">"^17.0.9"</span><span class="token punctuation">,</span>
+    <span class="token property">"@types/webpack"</span><span class="token operator">:</span> <span class="token string">"^5.28.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"ts-loader"</span><span class="token operator">:</span> <span class="token string">"^9.2.3"</span><span class="token punctuation">,</span>
+    <span class="token property">"typescript"</span><span class="token operator">:</span> <span class="token string">"^4.3.5"</span><span class="token punctuation">,</span>
+    <span class="token property">"webpack"</span><span class="token operator">:</span> <span class="token string">"^5.44.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"webpack-cli"</span><span class="token operator">:</span> <span class="token string">"^4.7.2"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"react"</span><span class="token operator">:</span> <span class="token string">"^17.0.2"</span><span class="token punctuation">,</span>
+    <span class="token property">"react-dom"</span><span class="token operator">:</span> <span class="token string">"^17.0.2"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3>2. <code class="language-text">tsconfig.json</code> 파일 생성</h3>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"es5"</span><span class="token punctuation">,</span>
+    <span class="token property">"module"</span><span class="token operator">:</span> <span class="token string">"esnext"</span><span class="token punctuation">,</span>
+    <span class="token property">"jsx"</span><span class="token operator">:</span> <span class="token string">"react"</span><span class="token punctuation">,</span>
+    <span class="token property">"sourceMap"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"outDir"</span><span class="token operator">:</span> <span class="token string">"./dist/"</span><span class="token punctuation">,</span>
+    <span class="token property">"noImplicitAny"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"lib"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"dom"</span><span class="token punctuation">,</span> <span class="token string">"DOM.Iterable"</span><span class="token punctuation">,</span> <span class="token string">"ESNext"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"skipLibCheck"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"esModuleInterop"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"allowSyntheticDefaultImports"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"strict"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"forceConsistentCasingInFileNames"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"noFallthroughCasesInSwitch"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"moduleResolution"</span><span class="token operator">:</span> <span class="token string">"node"</span><span class="token punctuation">,</span>
+    <span class="token property">"isolatedModules"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"resolveJsonModule"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"noEmit"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"allowJs"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/* ❓ include &amp; exclude 옵션: 컴파일에 포함할 디렉토리/파일 경로를 설정하거나 제외 */</span>
+  <span class="token property">"include"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"src/**/*"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"exclude"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules/"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>여기서 <code class="language-text">compilerOptions</code>에 쓰인 옵션들 설명
+<ul>
+<li><code class="language-text">target</code><br>
+CMA Script 버전을 ‘ES3’(기본값),<br>
+‘ES5’, ‘ES2015’, ‘ES2016’, ‘ES2017’, ‘ES2019’, ‘ES2021’ 또는 ‘ESNEXT’로 지정.</li>
+<li><code class="language-text">module</code><br>
+모듈을 위한 코드 생성 설정:<br>
+‘none’, ‘commonjs’, ‘amd’, ‘system’, ‘umd’, ‘es2015’, ‘es2020’, or ‘ESNext’.</li>
+<li><code class="language-text">jsx</code>: JSX 코드 생성 설정: ‘preserve’, ‘react-native’, 혹은 ‘react’.</li>
+<li><code class="language-text">sourceMap</code>: ‘.map’ 파일 생성 여부.</li>
+<li><code class="language-text">outDir</code>: 해당 디렉토리로 결과 구조를 보냅니다.</li>
+<li><code class="language-text">noImplicitAny</code>: ‘any’ 타입으로 구현된 표현식 혹은 정의 에러처리 여부</li>
+<li><code class="language-text">lib</code>: 컴파일에 포함될 라이브러리 파일 목록</li>
+<li><code class="language-text">skipLibCheck</code>: 정의 파일의 타입 확인을 건너 뛸 지 여부</li>
+<li><code class="language-text">esModuleInterop</code><br>
+모든 imports에 대한 namespace 생성을 통해<br>
+CommonJS와 ES Modules 간의 상호 운용성이 생기게할 지 여부,<br>
+‘allowSyntheticDefaultImports’를 암시적으로 승인.</li>
+<li><code class="language-text">allowSyntheticDefaultImports</code><br>
+default export이 아닌 모듈에서도 default import가 가능하게 할 지 여부,<br>
+해당 설정은 코드 추출에 영향은 주지 않고, 타입확인에만 영향을 줌.</li>
+<li><code class="language-text">strict</code>: 모든 엄격한 타입-체킹 옵션 활성화 여부</li>
+<li><code class="language-text">forceConsistentCasingInFileNames</code>: 같은 파일에 대한 일관되지 않은 참조를 허용하지 않을 지 여부</li>
+<li><code class="language-text">noFallthroughCasesInSwitch</code>: switch문에서 fallthrough 케이스에 대한 에러보고 여부</li>
+<li><code class="language-text">moduleResolution</code>: 모듈 해석 방법 설정: ‘node’ (Node.js) 혹은 ‘classic’ (TypeScript pre-1.6).</li>
+<li><code class="language-text">isolatedModules</code>: 각 파일을 분리된 모듈로 트랜스파일 (‘ts.transpileModule’과 비슷합니다).</li>
+<li><code class="language-text">resolveJsonModule</code><br>
+node 프로젝트에서 일반적으로 사용되는 확장자가 ‘.json’인 모듈을 가져올 수 있음.<br>
+여기에는 import정적 JSON 모양을 기반으로 하는 유형 생성이 포함됨.<br>
+(TypeScript는 기본적으로 JSON 파일 확인을 지원하지 않음)</li>
+<li><code class="language-text">noEmit</code>: 결과 파일 내보낼지 여부</li>
+<li><code class="language-text">allowJs</code>: 자바스크립트 파일 컴파일 허용 여부</li>
+</ul>
+</li>
+<li>더 많은 옵션: <a href="https://geonlee.tistory.com/214" target="_blank" rel="nofollow">tsconfig.json의 컴파일 옵션 정리</a></li>
+</ul>
+<h3>3. <code class="language-text">webpack.config.js</code> 파일 생성</h3>
+<p><strong>1)</strong> 초기</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> mode <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">||</span> <span class="token string">'development'</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">,</span>
+  devtool<span class="token operator">:</span> mode <span class="token operator">===</span> <span class="token string">'development'</span> <span class="token operator">?</span> <span class="token string">'source-map'</span> <span class="token operator">:</span> <span class="token string">'hidden-source-map'</span><span class="token punctuation">,</span>
+  entry<span class="token operator">:</span> <span class="token punctuation">{</span>
+    app<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'src'</span><span class="token punctuation">,</span> <span class="token string">'index.tsx'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    filename<span class="token operator">:</span> <span class="token string">'[name].js'</span><span class="token punctuation">,</span> <span class="token comment">// 컴파일 될 파일이름. ( [name]은 entry 키의 app을 뜻함 )</span>
+    path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 컴파일된 파일이 저장될 폴더</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  resolve<span class="token operator">:</span> <span class="token punctuation">{</span>
+    extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'.ts'</span><span class="token punctuation">,</span> <span class="token string">'.tsx'</span><span class="token punctuation">,</span> <span class="token string">'.js'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 특정 확장자만 resolve</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token operator">:</span> <span class="token punctuation">{</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(ts|tsx)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        use<span class="token operator">:</span> <span class="token string">'ts-loader'</span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">node_modules</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p>여기서 쓰인 옵션들 일부 정리</p>
+<ul>
+<li><code class="language-text">mode</code><br>
+mode 속성을 development, production 또는 none으로 설정하면<br>
+webpack에 내장된 환경별 최적화를 활성화 할 수 있음</li>
+<li><code class="language-text">entry</code>: 엔트리 포인트 설정</li>
+<li><code class="language-text">output</code><br>
+생성된 번들을 내보낼 위치와 이 파일의 이름을 지정하는 방법을 webpack에 알려주는 역할.<br>
+기본 출력 파일의 경우에는 ./dist/main.js로 생성된 기타 파일의 경우에는 ./dist 폴더로 설정</li>
+<li><code class="language-text">resolve</code><br>
+module이 resolve 되는 방식을 변경시킨다.<br>
+<em>예)</em> import ‘lodash’ 호출시, resolve 옵션은 웹팩이 lodash를 찾는 방법을 변경</li>
+<li><code class="language-text">module.rules</code>: 모듈이 생성 될 때 요청과 일치하는 Rule의 배열</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">resolve</code>..?</p>
+<ul>
+<li><a href="https://github.com/hoilzz/TIL/blob/master/FrontEnd/webpack/%EA%B3%B5%ED%99%88%EB%B2%88%EC%97%AD/module-resolution.md" target="_blank" rel="nofollow">github - hoilzz : module resolution</a></li>
+<li><a href="https://webpack.kr/configuration/resolve/" target="_blank" rel="nofollow">Webpack 공식 - Resolve</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>2)</strong> 테스트를 위해 미리 파일 생성</p>
+<p><code class="language-text">src/App.tsx</code></p>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">Test</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">src/index.tsx</code></p>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">React.StrictMode</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">App</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">React.StrictMode</span></span><span class="token punctuation">></span></span><span class="token punctuation">,</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">src/public/index.html</code></p>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document &lt;%= env %><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre></div>
+<p><strong>3)</strong> webpack: <code class="language-text">html-webpack-plugin</code> 설치</p>
+<p><code class="language-text">index.html</code>을 처리하기 위해 <code class="language-text">html-webpack-plugin</code> 설치</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">npm i --save-dev html-webpack-plugin</code></pre></div>
+<p>webpack.config.js 파일에 html-webpack-plugin을 추가</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> mode <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">||</span> <span class="token string">'development'</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">,</span>
+  <span class="token comment">// ... 중간 생략 ...</span>
+
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      template<span class="token operator">:</span> <span class="token string">'./src/public/index.html'</span><span class="token punctuation">,</span>
+      templateParameters<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// HTML 파일에서 사용될 변수들</span>
+        env<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span> <span class="token operator">?</span> <span class="token string">''</span> <span class="token operator">:</span> <span class="token string">'[DEV]'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+      <span class="token comment">// 번들링된 HTML 파일에서 공백이 제거되고 주석이 삭제됨</span>
+      minify<span class="token operator">:</span>
+        process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span>
+          <span class="token operator">?</span> <span class="token punctuation">{</span>
+              collapseWhitespace<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              removeComments<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+          <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      hash<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 정적 파일을 불러올 때 쿼리문자열에 웹팩 해쉬값을 추가.</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li><code class="language-text">HTMLWebpackPlugin</code>..?
+<ul>
+<li>빌드시 html에 값을 전달하여 html을 변경</li>
+<li>html 코드 압축(공백 제거, 주석 제거)</li>
+<li>webpack으로 빌드한 번들 파일을 자동으로 html에 추가</li>
+</ul>
+</li>
+<li>이 설정들을 테스트 해보기 위해 <code class="language-text">package.json</code> 수정 (<code class="language-text">scripts</code> 추가)
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"webpack"</span><span class="token punctuation">,</span>
+    <span class="token property">"production"</span><span class="token operator">:</span> <span class="token string">"NODE_ENV=production webpack --progress"</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li><code class="language-text">--progress</code>는 빌드 진척률을 보여줌</li>
+<li>실행법: <code class="language-text">npm run [이름]</code><br>
+예) <code class="language-text">npm run production</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>3-1)</strong> webpack: <code class="language-text">clean-webpack-plugin</code> 설치</p>
+<p>webpack을 실행할 때 마다 dist 폴더의 모든 항목을 삭제하려면 설치</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">npm i --save-dev clean-webpack-plugin</code></pre></div>
+<p>webpack.config.js 파일에 clean-webpack-plugin을 추가</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> CleanWebpackPlugin <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'clean-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mode <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">||</span> <span class="token string">'development'</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">,</span>
+  <span class="token comment">// ... 중간 생략 ...</span>
+
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token comment">// ... 생략 ...</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">new</span> <span class="token class-name">CleanWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 요고만 추가하면 됨</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<h2><strong>[2]</strong> webpack dev server</h2>
+<p>로컬에서 webpack 실행결과를 확인하기 위해 사용.</p>
+<ul>
+<li>결과물이 실제 파일로 보이지 않음</li>
+<li><code class="language-text">webpack</code>을 커맨드라인에 입력하여 수정할 때 마다 번들링한 파일을 생성해줄 필요가 없음</li>
+</ul>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">npm i --save-dev webpack-dev-server</code></pre></div>
+<p><code class="language-text">package.json</code> 수정 (<code class="language-text">scripts</code>에 추가 및 수정)</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"NODE_ENV=development webpack serve --progress"</span><span class="token punctuation">,</span>
+    <span class="token property">"production"</span><span class="token operator">:</span> <span class="token string">"NODE_ENV=production webpack --progress"</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>weback dev server 실행 시, <code class="language-text">webpack-dev-server</code>가 아닌 <code class="language-text">webpack serve</code>로!!<br>
+(예전에는 <code class="language-text">webpack-dev-server</code>로 실행했었는데 <code class="language-text">webpack serve</code>로 바뀜!)</li>
+</ul>
+<p><strong>1)</strong> <code class="language-text">webpack.config.js</code>에 devServer 옵션 설정</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> CleanWebpackPlugin <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'clean-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mode <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">||</span> <span class="token string">'development'</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">,</span>
+  <span class="token comment">// ... 중간 생략 ...</span>
+
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">/* ... 생략 ... */</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
+    contentBase<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./public'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    hot<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    host<span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+    port<span class="token operator">:</span> <span class="token number">3000</span><span class="token punctuation">,</span>
+    historyApiFallback<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    writeToDisk<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p>여기서 쓰인 옵션들 정리</p>
+<ul>
+<li><code class="language-text">contentBase</code><br>
+서버에 콘텐츠를 제공할 위치를 알려줌 (정적 파일들)</li>
+<li><code class="language-text">hot</code><br>
+hot reload 기능 활성<br>
+(전체 Reload 없이 애플리케이션 실행되는 동안 모듈을 교환, 추가 또는 제거)</li>
+<li><code class="language-text">host</code>: 개발환경에서 도메인을 맞추어야 하는 상황에서 사용</li>
+<li><code class="language-text">port</code>: 개발 서버 포트 번호 설정</li>
+<li><code class="language-text">historyApiFallback</code><br>
+히스토리 API를 사용하는 SPA 개발시 설정. 404가 발생하면 index.html로 리다이렉트</li>
+<li><code class="language-text">writeToDisk</code><br>
+true시 devServer로 생성되는 컴파일된 파일을 저장함.<br>
+저장은 설정한 output.path 디렉토리에 기록 (기본값 false)</li>
+</ul>
+</li>
+</ul>
+<p>전부는 아니지만 추가 옵션 끄적끄적 👀</p>
+<ul>
+<li>
+<p>추가 옵션 1</p>
+<ul>
+<li><code class="language-text">publicPath</code>: 브라우저를 통해 접근하는 경로 (기본값 ’/‘)</li>
+<li><code class="language-text">overlay</code>: 빌드시 에러나 경고를 브라우져 화면에 표시</li>
+<li><code class="language-text">stats</code><br>
+메시지 수준을 정할수 있다.<br>
+‘none’, ‘errors-only’, ‘minimal’, ‘normal’, ‘verbose’로 메세지 수준을 조절</li>
+</ul>
+</li>
+<li>
+<p>추가 옵션 2 (lazy &#x26; filename)</p>
+<ul>
+<li>
+<p><code class="language-text">lazy</code><br>
+lazy모드가 활성화가 되면 dev-server는 요청될 때만 번들을 컴파일.<br>
+이는 웹 팩이 파일 변경 사항을 감시하지 않음을 의미.<br>
+게으른 모드라고도 불러짐</p>
+</li>
+<li>
+<p><code class="language-text">filename</code><br>
+devServer 설정하는 부분에서의 filename 옵션은 lazy 모드에서 사용하면 컴파일을 줄일수 있음.<br>
+<strong><em>lazy 모드에서 없이 사용하면 효과 없음</em></strong></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 적용 예시</span>
+devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
+    lazy<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    filename<span class="token operator">:</span> <span class="token string">'[name].js'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2><strong>[3]</strong> webpack에 loader 추가</h2>
+<p><strong>1-1)</strong> <code class="language-text">css-loader</code><br>
+webpack에서 .css 파일을 읽어들이기위해 사용하는 로더</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"># css-loader 설치
+npm i --save-dev css-loader</code></pre></div>
+<p><strong>1-2)</strong> <code class="language-text">style-loader</code><br>
+<code class="language-text">&lt;style></code> 태그를 삽입하여 CSS에 DOM을 추가</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"># style-loader 설치
+npm i --save-dev style-loader</code></pre></div>
+<p><strong>1-3)</strong> <code class="language-text">css-loader</code> &#x26; <code class="language-text">style-loader</code>를 <code class="language-text">webpack.config.js</code>에 추가</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> CleanWebpackPlugin <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'clean-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mode <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">||</span> <span class="token string">'development'</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token punctuation">,</span>
+  devtool<span class="token operator">:</span> mode <span class="token operator">===</span> <span class="token string">'development'</span> <span class="token operator">?</span> <span class="token string">'source-map'</span> <span class="token operator">:</span> <span class="token string">'hidden-source-map'</span><span class="token punctuation">,</span>
+  entry<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 생략 */</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  resolve<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 생략 */</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token operator">:</span> <span class="token punctuation">{</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(ts|tsx)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        use<span class="token operator">:</span> <span class="token string">'ts-loader'</span><span class="token punctuation">,</span>
+        exclude<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">node_modules</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 추가('style-loader', 'css-loader')</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 생략 */</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">/* 생략 */</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 생략 */</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<p><strong>1-4)</strong> <code class="language-text">css-loader</code> &#x26; <code class="language-text">style-loader</code> 추가 설명 및 동작 원리</p>
+<ul>
+<li>이 2개의 loader들은 보통 결합해서 씀.</li>
+<li>동작 원리
+<ul>
+<li><code class="language-text">use: ['style-loader', 'css-loader']</code> 처럼<br>
+여러 loader 를 위와 같이 중복해서 쓰면 오른쪽의 loader 부터 읽게 됨.<br>
+이러한 것을 <strong>ChainingLoaders</strong> 라고 한다.
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1. Webpack은 모듈안에 의존적인 css 파일을 검색
+2. 찾으면 css-loader 실행
+3. css-loader는 모든 css와 그 css 내부의 import한 다른 css 파일을
+    json 파일로 로드하고 style-loader에 넘겨준다.
+4. style-loader는 json을 가져와서 &lt;style> 태그를 추가하고
+    index.html 파일 안에 tag를 삽입한다</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>2-1)</strong> <code class="language-text">file-loader</code><br>
+이름 그대로 파일을 로딩하는 loader</p>
+<ul>
+<li>웹팩은 모든 것을 모듈로 처리하는데 CSS 파일도 모듈로 다룸.<br>
+CSS에서 url() 함수에 파일명을 지정할수 있는데<br>
+이를 모듈에서 발견하면 웹팩은 file-loader를 통해 파일을 복사함.</li>
+</ul>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"># file-loader 설치
+npm i --save-dev file-loader</code></pre></div>
+<p><strong>2-2)</strong> <code class="language-text">file-loader</code>를 <code class="language-text">webpack.config.js</code>에 추가</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/* 생략 */</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    mode<span class="token punctuation">,</span>
+    devtool<span class="token operator">:</span> <span class="token comment">/* 생략 */</span><span class="token punctuation">,</span>
+    entry<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">/* 생략 */</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    resolve<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">/* 생략 */</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">/* 생략 */</span>
+
+            <span class="token comment">// 추가 (file-loader)</span>
+            <span class="token punctuation">{</span>
+                test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(webp|jpg|png|jpeg)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+                loader<span class="token operator">:</span> <span class="token string">'file-loader'</span><span class="token punctuation">,</span>
+                options<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    name<span class="token operator">:</span> <span class="token string">'[name].[ext]?[hash]'</span><span class="token punctuation">,</span> <span class="token comment">// 파일명 형식</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">/* 생략 */</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token comment">/* 생략 */</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    devServer<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">/* 생략 */</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>여기서는 확장자 <code class="language-text">webp</code>, <code class="language-text">jpg</code>, <code class="language-text">png</code>, <code class="language-text">jpeg</code>를 가진 파일들을 <code class="language-text">file-loader</code>로 처리해줌</li>
+<li><code class="language-text">options</code>에서<code class="language-text">name</code>의 placeholder들
+<ul>
+<li><code class="language-text">[name]</code>은 entry에 있는 app의 키 이름을 가져옴 (<code class="language-text">"app"</code>)</li>
+<li><code class="language-text">[ext]</code>는 파일/리소스의 파일 <strong>확장자</strong></li>
+<li><code class="language-text">[hash]</code>는 특정 빌드에 해당하는 <strong>해쉬</strong> 값</li>
+</ul>
+</li>
+<li>file-loader의 속성들
+<ul>
+<li><code class="language-text">options</code>: 옵션을 설정.</li>
+<li><code class="language-text">options.name</code>: 조건에 해당하는 파일이 저장될 경로(이름 포함)를 설정.</li>
+<li><code class="language-text">output</code>: 번들된 결과물이 저장되는 출력 디렉토리에 대한 정보를 담은 객체.</li>
+<li><code class="language-text">path</code>: 파일이 저장될 경로를 의미.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3)</strong> loader 설정 할 때의 <code class="language-text">webpack.config.js</code>의 <code class="language-text">module.rules</code>의 아이템 (<code class="language-text">rule</code>) 하나마다 속성들.</p>
+<ul>
+<li><code class="language-text">test</code>: 정규식 또는 문자열을 통해 조건에 해당하는 파일을 찾음.</li>
+<li><code class="language-text">use</code>: 조건에 해당하는 파일을 처리할 로더. 복수의 로더가 있는 경우 역순으로 실행.</li>
+<li><code class="language-text">include</code>: 검사를 포함할 경로이며, test와 함께 사용시 대상인 파일은 두 조건을 모두 일치해야 함.</li>
+<li><code class="language-text">exclude</code>: 검사를 제외할 경로이며, test 및 include 보다 우선시 함.</li>
+</ul>
+<hr>
+<h3>참고자료</h3>
+<p><strong>[+]</strong> 공통</p>
+<ul>
+<li><a href="https://webpack.kr/configuration/module/#modulerules" target="_blank" rel="nofollow">webpack : module.rules</a></li>
+<li><a href="https://webpack.kr/concepts/loaders/#inline" target="_blank" rel="nofollow">webpack : loaders inline 접두사</a></li>
+</ul>
+<p><strong>[1]</strong> 일반 (Normal : No webpack-dev-server)</p>
+<ul>
+<li><a href="https://blog.doitreviews.com/development/2020-05-07-react-typescript-webpack/" target="_blank" rel="nofollow">CRA 없이 React + TypeScript + Webpack 프로젝트 만들기 #1</a></li>
+<li><a href="https://yamoo9.gitbook.io/typescript/cli-env/tsconfig" target="_blank" rel="nofollow">TypeScript컴파일 설정</a></li>
+<li><a href="https://webpack.kr/" target="_blank" rel="nofollow">Webpack 공식</a></li>
+<li><a href="https://hoilzz.github.io/webpack/9-resolve/" target="_blank" rel="nofollow">[나만의 웹팩 만들기] 9. resolve</a></li>
+<li><a href="https://www.typescriptlang.org/tsconfig#resolveJsonModule" target="_blank" rel="nofollow">tsconfig - resolveJsonModule</a></li>
+<li><a href="https://agal.tistory.com/71" target="_blank" rel="nofollow">자주 사용하는 플러그인 - 웹팩(Webpack) 기본편 | 김정환</a></li>
+</ul>
+<p><strong>[2]</strong> webpack dev server</p>
+<ul>
+<li><a href="https://blog.doitreviews.com/development/2020-05-11-webpack-dev-server-and-svg/" target="_blank" rel="nofollow">CRA 없이 React + TypeScript + Webpack 프로젝트 만들기 #2</a></li>
+<li><a href="https://joshua1988.github.io/webpack-guide/tutorials/webpack-dev-server.html#%EC%9B%B9%ED%8C%A9-%EB%8D%B0%EB%B8%8C-%EC%84%9C%EB%B2%84" target="_blank" rel="nofollow">웹팩 핸드북 : 웹팩 데브 서버</a></li>
+<li><a href="https://jeonghwan-kim.github.io/series/2020/01/02/frontend-dev-env-webpack-intermediate.html" target="_blank" rel="nofollow">프론트엔드 개발환경의 이해: 웹팩(심화)</a></li>
+<li><a href="https://trustyoo86.github.io/webpack/2018/01/10/webpack-configuration.html" target="_blank" rel="nofollow">webpack 설정 option에 대해서</a></li>
+<li>Webpack 공식 : devServer의 옵션들 일부
+<ul>
+<li><a href="https://webpack.js.org/configuration/dev-server/" target="_blank" rel="nofollow">devServer</a></li>
+<li><a href="https://webpack.js.org/configuration/dev-server/#devserverlazy-" target="_blank" rel="nofollow">devServer.lazy</a></li>
+<li><a href="https://webpack.js.org/configuration/dev-server/#devserverfilename-" target="_blank" rel="nofollow">devServer.filename</a></li>
+<li><a href="https://webpack.js.org/configuration/dev-server/#devserverwritetodisk-" target="_blank" rel="nofollow">devServer.writeToDisk</a></li>
+<li><a href="https://webpack.js.org/configuration/dev-server/#devserverhot" target="_blank" rel="nofollow">devServer.hot</a>
+<ul>
+<li><a href="https://webpack.js.org/concepts/hot-module-replacement/" target="_blank" rel="nofollow">webpack : Hot Module Replacement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>[3]</strong> webpack에 loader 추가</p>
+<ul>
+<li><a href="https://heecheolman.tistory.com/33" target="_blank" rel="nofollow">[Webpack] css-loader &#x26; style-loader</a></li>
+<li><a href="https://jeonghwan-kim.github.io/js/2017/05/22/webpack-file-loader.html" target="_blank" rel="nofollow">웹팩의 file-loader와 url-loader</a></li>
+<li><a href="https://v4.webpack.js.org/loaders/file-loader/#ext" target="_blank" rel="nofollow">webpack : file-loader Placeholders</a></li>
+<li><a href="https://joshua1988.github.io/web-development/webpack/caching-strategy/" target="_blank" rel="nofollow">Webpack(웹팩) 캐싱 전략</a></li>
+<li><a href="https://kowoohyuk.tistory.com/139" target="_blank" rel="nofollow">우럭🐟 의 웹팩 기초, 로더</a></li>
+</ul></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1lmou780"></div><style data-emotion="css 195jetu">.css-195jetu{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-195jetu{grid-template-columns:1fr;width:100%;padding:50px 20px;}}</style><footer class="css-195jetu eakiay40"><p>Thank You for Visiting My Blog, Have a Good Day 😆</p><p>© 2021 Rano, Powered By Gatsby.</p></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2021-07-15-CRA없이_React_+_TypeScript_환경_만들기_(feat._Webpack)/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-9608503186c9235ba761.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-6dfe49717b4327ad2cb6.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-dbb4cc3c0bc42f56eab9.js"],"component---src-pages-portfolio-tsx":["/component---src-pages-portfolio-tsx-0af639293f44eff172fd.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-76aae048854278359189.js"]};/*]]>*/</script><script src="/polyfill-65a907e51915b8b71475.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-76aae048854278359189.js" async=""></script><script src="/2a6c602b4f9286cd2f42133197642c424ddcc25e-989cf3506fe2b8c48925.js" async=""></script><script src="/cb1608f2-3d1f96b69f7c4498694b.js" async=""></script><script src="/app-9608503186c9235ba761.js" async=""></script><script src="/framework-094b0089736b8f621f0d.js" async=""></script><script src="/webpack-runtime-962e71be92dae23c33c4.js" async=""></script></body></html>
