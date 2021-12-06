@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-tsx",
-    "path": "/2021-08-06-TIL/",
-    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<h2>🚀 TIL : Weekly Report (8월 1주차 / 2021.08.06)</h2>\n<p>이번주엔 무엇을 했을까?<br>\n이번주도 역시 많은 걸 하였지만,<br>\n예전엔 싫어하던 옵저버 패턴은 괜찮고 할만하지만,<br>\n처음보는 pub-sub 패턴을 구현하는 것이었는데<br>\n예전엔 잘못썼던 event emitter도 이젠 괜찮네</p>\n<p>그리고 네트워크… OSI 7계층을 구현해야 했는데<br>\n구현하기 너무 어렵고 난 전송의 4층에서 가둬져버린..<br>\n분명 밤을 샜는데 말이지?<br>\n다음에 한번해보자 😭</p>\n<p>이번주 프로젝트도 괜찮았다.<br>\n이번주차에는 외국인을 위한 K-POP 가사지원 및 번역 앱을 맡게 되었는데<br>\n받아오는 가사 데이터가 한 묶음으로와서 이걸 나누는데 좀 고생했다..<br>\n플러터는 자바스크립트처럼 <code class=\"language-text\">Array.filter</code> 같은게 있지만서도 없는..<br>\n비슷한 플러터 <code class=\"language-text\">List</code>의 <code class=\"language-text\">where</code>라는게 있어서 해결!</p>\n<p>이번주도 고생했고. 다음주는 챌린지 마지막이다!<br>\n화이팅!! 🎉</p>","frontmatter":{"title":"[TIL] 2021-08-06","summary":null,"date":"2021.08.06.","categories":["TIL"],"options":null,"thumbnail":null}}}]}},"pageContext":{"slug":"/2021-08-06-TIL/"}},
-    "staticQueryHashes": []}

@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-template-tsx",
-    "path": "/2021-08-28-TIL/",
-    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<h2>🚀 TIL : Weekly Report (8월 4주차 / 2021.08.28)</h2>\n<p>후… 이번주..? 엄청나게 정신이 없었다.<br>\n어지러웠어..</p>\n<br/>\n<p>11번가 과제도 빠르게 한다고 했긴했는데,<br>\n생각외로 전부 완성은 못하고 흑..<br>\n그래도 새로운 걸 해봐서 다행인듯.<br>\n이번 아니었으면 언제 바닐라로 SPA를 만들어보겠어?</p>\n<br/>\n<p>과제가 끝나고나서는 다시 알고리즘 강의를 듣고<br>\n좀 지쳐서 쉬다가<br>\n(요즘 자주 지친다.. 취준도 너무 긴 것 같은데 난 준비가 안된거 같고 🥲)<br>\n캐로셀 라이브러리 만드는 거 조금하다가<br>\nHIFI도 회의하고, 속도를 내긴 해야하는데<br>\n할 건 많은 것 같은데… 후\n이러다가 프로젝트 완성할 수 있을까 싶기도하고</p>\n<br/>\n<p>이번주도 수고했고, 다음주도.. 화이팅 😆</p>","frontmatter":{"title":"[TIL] 2021-08-28","summary":null,"date":"2021.08.28.","categories":["TIL"],"options":null,"thumbnail":null}}}]}},"pageContext":{"slug":"/2021-08-28-TIL/"}},
-    "staticQueryHashes": []}
