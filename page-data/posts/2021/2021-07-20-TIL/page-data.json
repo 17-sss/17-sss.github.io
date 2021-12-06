@@ -1,5 +1,5 @@
 {
-    "componentChunkName": "component---src-templates-post-template-tsx",
+    "componentChunkName": "component---src-pages-custom-post-tsx",
     "path": "/posts/2021/2021-07-20-TIL/",
     "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<h2>🚀 Today I Learned (2021.07.20)</h2>\n<h3><strong>👨‍💻 오늘의 알고리즘</strong></h3>\n<ul>\n<li><a href=\"https://17-sss.github.io/2021-07-20-%ED%9A%8C%EB%AC%B8%EB%AC%B8%EC%9E%90%EC%97%B4\" target=\"_blank\" rel=\"nofollow\">[Algorithm] IF JS Algorithm - 회문문자열</a></li>\n</ul>\n<h3><strong>✍️ 회고</strong></h3>\n<ul>\n<li>오늘 아침에는 알고리즘 1문제<br>\n오전에는 팀원분들 코드 보고<br>\n서로 피드백하다가 점심에 과제 나와서<br>\n과제 해결하다가 하루 끝..<br>\n이 과제가 무엇인지는 쓸 수 없지만<br>\n단지 설치하다가 애먹었다.</li>\n<li>저녁에는 HiFi 프로젝트 html코드 조금 짜다가<br>\n프로젝트 팀분들이랑 회의하고 끝<br>\n지라, 컨플루언스 쓰기로 했는데 신기했다<br>\n칸반이랑 스크럼도..<br>\n내일 아침에 공부하자!</li>\n</ul>","frontmatter":{"title":"[TIL] 2021-07-20","summary":null,"date":"2021.07.20.","categories":["TIL"],"options":null,"thumbnail":null}}}]}},"pageContext":{"slug":"/2021/2021-07-20-TIL/"}},
     "staticQueryHashes": []}

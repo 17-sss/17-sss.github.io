@@ -1,5 +1,5 @@
 {
-    "componentChunkName": "component---src-templates-post-template-tsx",
+    "componentChunkName": "component---src-pages-custom-post-tsx",
     "path": "/posts/2021/2021-06-17-TIL/",
     "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<h2>🚀 Today I Learned (2021.06.17)</h2>\n<br/>\n<h3><strong>👨‍💻 오늘의 알고리즘</strong></h3>\n<ul>\n<li><a href=\"https://17-sss.github.io/2021-06-17-Insert_Delete_GetRandom_O(1)\" target=\"_blank\" rel=\"nofollow\">[Algorithm] LeetCode : Insert Delete GetRandom O(1)</a></li>\n</ul>\n<br/>\n<h3><strong>😆 오늘 뭐했어?</strong></h3>\n<ul>\n<li>오늘은 진짜 아무것도 안했다.<br>\nMOCK data나 조금 만들다가 끝.</li>\n</ul>\n<br/>\n<h3><strong>✍️ 회고</strong></h3>\n<ul>\n<li>오늘 학원을 갔는데 수다만 3시간 넘게 하다왔다.<br>\n너무 행복했고 코딩은 아.. 모르겠다!<br>\n그래도 내일은 좀 해보자!!<br>\n다른 포지션분들에게 해를 끼치면 안되니까!</li>\n</ul>","frontmatter":{"title":"[TIL] 2021-06-17","summary":null,"date":"2021.06.17.","categories":["TIL"],"options":null,"thumbnail":null}}}]}},"pageContext":{"slug":"/2021/2021-06-17-TIL/"}},
     "staticQueryHashes": []}
