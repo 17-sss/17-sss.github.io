@@ -1,0 +1,556 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.d8cc6fc6ec904426611e.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}@keyframes animations__slide--left{0%{left:100%;opacity:0}to{left:0;opacity:1}}@keyframes animations__slide--right{0%{opacity:0;right:100%}to{opacity:1;right:0}}@keyframes animations__blink{0%{opacity:0}to{opacity:1}}</style><meta name="generator" content="Gatsby 4.0.1"/><style id="jss-server-side"></style><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link rel="canonical" href="https://17-sss.github.io/posts/2021/2021-02-11-Git(Opentutorials)/" data-baseprotocol="https:" data-basehost="17-sss.github.io"/><title data-react-helmet="true">[Git] 생활코딩 강의 모음</title><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="[Git] 생활코딩 강의 모음"/><meta data-react-helmet="true" property="og:description" content=""/><meta data-react-helmet="true" property="og:image" content="/static/c5b8b6f77f5255befb6c460d7355a7ee/background_git.png"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="[Git] 생활코딩 강의 모음"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="[Git] 생활코딩 강의 모음"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:image" content="/static/c5b8b6f77f5255befb6c460d7355a7ee/background_git.png"/><meta data-react-helmet="true" name="twitter:site" content="@17-sss"/><meta data-react-helmet="true" name="twitter:creator" content="@17-sss"/><meta data-react-helmet="true" name="google-site-verification" content="EnJH07IqCza2RRsk3dnbayCSB08fnsvqpMhawDSsOFU"/><meta data-react-helmet="true" name="naver-site-verification" content="e2504342f5b1a3a3a9360c2ca831fa1881e6e5b6"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-89ec7ab2cf6b0bbd3ca3.js"/><link as="script" rel="preload" href="/framework-cc7022c8d9ab50daf3c0.js"/><link as="script" rel="preload" href="/app-cd6629c59e30b19b7535.js"/><link as="script" rel="preload" href="/cb1608f2-9aafed8d9b39d46f512d.js"/><link as="script" rel="preload" href="/120a60f1298cbb2056afbd1695e6f3165224b969-130fe9bcc7ce298cffac.js"/><link as="script" rel="preload" href="/component---src-pages-custom-post-tsx-2fc2349107daa844432a.js"/><link as="fetch" rel="preload" href="/page-data/posts/2021/2021-02-11-Git(Opentutorials)/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1eg09uj0"><style data-emotion="css-global 2kcqah">@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp ex6076l1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo ex6076l0"><div style="max-width:318px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;318&#x27; width=&#x27;318&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAADe0lEQVQ4y42UP0gjSxzHZ3ez8U/hX9xOLhqEWCgIKrIWPhXSiBqEpIjFiZriaThjkyakOAWNhQpyD9QIFlfYCkljK1hJirO4h4XcAyVFsBAkaDab+T2+k52Qx93BG5hlmJnfZ7+/P/NjuVyOEZGYhmFoJycnDOP09PSPxcXFv/x+/9/j4+Ml0zTt6enpf0Kh0NednZ0AEbmi0SiuqrC9v79nl5eXrAbDgWmaLJPJjE5OTl53dXWRoig4+Gm2tbXR6Ojo94ODgwAMYV8oFJS7uztWg+GTSCT+9Hg80tBmjJVVVa1omsblxJ4zyTAMWllZOZRQwYKbUAYYVDkwGPBfTUVR5Bo/tJubm2lpaekLqw6FIWZws6enR8C8Xq99dnZGc3Nz0pBaWlqotbWVNE3DHT42NsbT6TRNTEwIxZ2dnbS1tfUxGAxWsYiZVBYOh4mIOD7X19d0c3NDT09PlM/nKZfL0dXVFZVKJXEnlUrJ0NDg4GCeiNpENh1XccD9fr+Alctl+t2QZ5ubm8IDVVWtpqYmisVinxhKA9lUVVXEbW9vTwBt267NSqUiJtaASWAmkxFhQeIAnpmZ+cZQZ467FcMw+MvLi7gMgPCL858UYk/um6bJHXve399PDEUrN4aHh7n8e73Rr2DyHmIOWyRM13XO8AIk0Ofz8be3t/8FhPsY8/PzNaCqqpzhOQGI+nK73fzh4eE/gZfQ+h/IcLy/v6PMai6L0gsGg18doEhKLBaryZIq6sGAyXU6nRZJcblcIil+v/8Hw0NH4eq6Xu7t7RUXEokEvb6+/laZZVl0fHxcjVlVnaXrOkUikc94f66RkZHvOLi4uLCTyaSQ39HRQQsLC/T8/FwDIwwbGxvU3d1N8hVpmibU9fX1FQuFwgeGFnR0dBTA00JxPz4+8ng8LgxCoRCXMKjCiEQiwgu3211NAmOlhoYGWl9fT3q9XlbrNGtra+gaNDU1VbZt20bAnSfI64B8f39fKNN1HcpEyc3Ozl7JjlPfD9nq6uqXxsZGam9vp6GhISuZTFac5HDLsoTa3d1dgCzYQxlgRNQIRjabVUSnRXOU0FQq9XFgYCAPg0AgIFQhdlLh9va26Eo+n68YjUaTUtn5+bl6eHjIRNtGp3WACloQusby8vKnbDb7zckux8T69vb2Rzgc/lwsFj94PB4mlQEWj8fZv3PGgQppq+5qAAAAAElFTkSuQmCC" alt=""/><picture><source type="image/webp" data-srcset="/static/c5b8b6f77f5255befb6c460d7355a7ee/1deab/background_git.webp 80w,/static/c5b8b6f77f5255befb6c460d7355a7ee/1d8ec/background_git.webp 159w,/static/c5b8b6f77f5255befb6c460d7355a7ee/46e78/background_git.webp 318w" sizes="(min-width: 318px) 318px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 318px) 318px, 100vw" decoding="async" loading="lazy" data-src="/static/c5b8b6f77f5255befb6c460d7355a7ee/40647/background_git.png" data-srcset="/static/c5b8b6f77f5255befb6c460d7355a7ee/4ed6d/background_git.png 80w,/static/c5b8b6f77f5255befb6c460d7355a7ee/79fa7/background_git.png 159w,/static/c5b8b6f77f5255befb6c460d7355a7ee/40647/background_git.png 318w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/c5b8b6f77f5255befb6c460d7355a7ee/1deab/background_git.webp 80w,/static/c5b8b6f77f5255befb6c460d7355a7ee/1d8ec/background_git.webp 159w,/static/c5b8b6f77f5255befb6c460d7355a7ee/46e78/background_git.webp 318w" sizes="(min-width: 318px) 318px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 318px) 318px, 100vw" decoding="async" loading="lazy" src="/static/c5b8b6f77f5255befb6c460d7355a7ee/40647/background_git.png" srcSet="/static/c5b8b6f77f5255befb6c460d7355a7ee/4ed6d/background_git.png 80w,/static/c5b8b6f77f5255befb6c460d7355a7ee/79fa7/background_git.png 159w,/static/c5b8b6f77f5255befb6c460d7355a7ee/40647/background_git.png 318w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e18o2tdp3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e18o2tdp2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e18o2tdp1">[Git] 생활코딩 강의 모음</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e18o2tdp0"><div>Git</div><div>2021.02.11.</div></div></div></div><style data-emotion="css 1jej2jc">.css-1jej2jc{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:40px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-1jej2jc p{padding:3px 0;}.css-1jej2jc strong{font-weight:900;}.css-1jej2jc h1,.css-1jej2jc h2,.css-1jej2jc h3{font-weight:800;margin-bottom:12px;}.css-1jej2jc hr+h1,.css-1jej2jc hr+h2,.css-1jej2jc hr+h3{margin-top:0;}.css-1jej2jc *+h1,.css-1jej2jc *+h2,.css-1jej2jc *+h3{margin-top:36px;}.css-1jej2jc h1{font-size:30px;}.css-1jej2jc h2{font-size:25px;}.css-1jej2jc h3{font-size:20px;}.css-1jej2jc h4{font-size:18px;}.css-1jej2jc h5{font-size:17px;}.css-1jej2jc h6{font-size:16px;}.css-1jej2jc blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-1jej2jc ol,.css-1jej2jc ul{margin-left:20px;padding:8px 0;}.css-1jej2jc hr{border:none;box-shadow:0 0 0 0.1px #000;margin:30px 0;}.css-1jej2jc a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-1jej2jc pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-1jej2jc pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-1jej2jc pre[class*='language-'] *{font-family:'Roboto','Noto Sans KR',system-ui,Apple SD Gothic Neo,AppleGothic,'Nanum Myeongjo',sans-serif,serif;}.css-1jej2jc code[class*='language-'],.css-1jej2jc pre[class*='language-']{tab-size:2;}.css-1jej2jc tr{background-color:#fefefe;}.css-1jej2jc tr:nth-of-type(2n){background-color:#f6f8fa;}.css-1jej2jc th,.css-1jej2jc td{padding:6px 13px;border:1px solid #d0d7de;}.css-1jej2jc th{font-weight:600;}@media (max-width: 768px){.css-1jej2jc{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-1jej2jc h1{font-size:23px;}.css-1jej2jc h2{font-size:20px;}.css-1jej2jc h3{font-size:17px;}.css-1jej2jc h4{font-size:15px;}.css-1jej2jc h5{font-size:14px;}.css-1jej2jc h6{font-size:13px;}.css-1jej2jc img{width:100%;}.css-1jej2jc hr{margin:50px 0;}}</style><div class="css-1jej2jc e1iovc3b0"><h1>생활코딩 - Git</h1>
+<h2><strong>[1]</strong> Git의 목적</h2>
+<ul>
+<li>version (버전 관리)</li>
+<li>backup (백업)</li>
+<li>collaborate (협업)</li>
+</ul>
+<blockquote>
+<p>앞에 것을 이해하지 못하면 뒤에 것을 하지 못함.<br>
+뒤로 갈수록 어려워짐.</p>
+</blockquote>
+<br/>
+<h3><strong>1.</strong> 버전 관리</h3>
+<p>Git을 사용한다면 버전 관리가 쉬워지지만, 그냥 로컬에서 버전 관리를 한다면..?<br>
+알다시피 복잡함. 직접 한땀 한땀 폴더를 만들어서 버전 관리를 한다하면..<br>
+언젠간 컴퓨터가 고장날 수도 있는건데 말야
+Git은 모든 <code class="language-text">log</code>가 기록도 되며, 버전 관리도 가능해짐.</p>
+<h3><strong>2.</strong> 백업</h3>
+<p>Git에 나의 코드를 <code class="language-text">push</code>하면 백업이 됨.<br>
+백업 후 다른 컴퓨터에서 <code class="language-text">pull</code>을 하게되면 수정했던 사항이 지금 사용하는 컴퓨터로 동기화됨.<br>
+백업에 용이하며 버전관리도 용이함.</p>
+<h3><strong>3.</strong> 협업</h3>
+<p>실질적으로 <code class="language-text">pull</code> &#x26; <code class="language-text">push</code>로 협업이 가능함.<br>
+서로 주고 받기가 가능해지니까.<br>
+서로 같은 위치를 작업해서 겹치거나 덮어쓰기하게 된다면..?<br>
+이것도 Git이 관리해줌!</p>
+<br/>
+<h2><strong>[2]</strong> Git CLI - 버전관리</h2>
+<ul>
+<li>
+<p><code class="language-text">git init</code></p>
+<ul>
+<li>Git 초기화</li>
+<li><code class="language-text">git init .</code> 하면 현재 디렉토리를 버전관리시킴.</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git status</code></p>
+<ul>
+<li>현재 Git 상태를 물어봄.</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git add [파일명]</code></p>
+<ul>
+<li>추가하거나 수정된 파일들을 버전관리를 위해 스테이징함.</li>
+<li><code class="language-text">git add .</code>
+<ul>
+<li>현재 디렉토리 포함 밑에 있는 모든 파일을 add함 (추가 &#x26; 수정된 사항을 전부 스테이징).</li>
+</ul>
+</li>
+<li><code class="language-text">git add [폴더명]</code>
+<ul>
+<li>현재 디렉토리 안에 있는 [폴더명]을 기준으로 그 폴더안에 있는 모든 파일을 add</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git commit</code></p>
+<ul>
+<li>생코 강의에서는 Commit은 버전이라고 생각해도 됨.</li>
+<li>스테이징된 파일들 Commit (<strong>버전 확정</strong> 및 커밋 메세지 작성 등)</li>
+<li>그냥 <code class="language-text">git commit</code> 하면 에디터 실행된 상태에서 작성.
+<ul>
+<li>이 경우, 여러 줄을 커밋메세지로 작성할 수 있음.</li>
+<li>해당 명령어 쓸 시, git에 지정된 텍스트에디터로 해당 명령이 실행되는데 바꾸고 싶다면,<br>
+<code class="language-text">git config --global core.editor "[에디터명 or 경로]"</code></li>
+</ul>
+</li>
+<li><code class="language-text">git commit -m "[Message]"</code>
+<ul>
+<li>빠르고 간결하게 커밋 메세지를 작성할 수 있음.</li>
+</ul>
+</li>
+<li><code class="language-text">git commit -am "[Message]"</code>
+<ul>
+<li><em>-a는 add의 약자</em></li>
+<li>add하고 commit까지 한번에 가능<br>
+최초 한번은 add가 되었었던 파일들만 자동으로 add 됨.<br>
+한번이라도 add 되지 않았던 새로운 파일들은 add되지 않음.<br>
+(git add를 사용하여 track 상태로 한번이라도 만들어야함)</li>
+</ul>
+</li>
+<li><code class="language-text">git commit --amend</code>
+<ul>
+<li>이미 커밋했을 경우, 커밋메세지를 수정하고 싶다면 이 명령어 사용!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git log</code></p>
+<ul>
+<li>현재 버전 확정된 목록이라던지, 그동안 커밋했던 내역 볼 수 있음.</li>
+<li>히스토리 느낌.</li>
+<li><code class="language-text">git log --name-only</code>
+<ul>
+<li>변경된 파일의 전체 경로 이름</li>
+</ul>
+</li>
+<li><code class="language-text">git log --name-status</code>
+<ul>
+<li>전체 경로 이름 및 변경된 파일의 상태</li>
+</ul>
+</li>
+<li><code class="language-text">git log --stat</code>
+<ul>
+<li>축약 된 경로 이름 및 변경된 파일의 diffstat</li>
+</ul>
+</li>
+<li><code class="language-text">git log -p</code>
+<ul>
+<li><em>-p는 patch의 약자</em></li>
+<li>수정된 세부사항까지 보여주는 느낌.</li>
+</ul>
+</li>
+<li><code class="language-text">git log --all --graph --online</code>
+<ul>
+<li><em>–all</em> 는 앞으로 내가 만들 모든 브랜치가 보임</li>
+<li><em>–graph</em> 는 로그 상태가 시각적으로 표현됨</li>
+<li><em>–oneline</em> 버전이 장황하게 보이지 않게 하기 위함.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git diff</code></p>
+<ul>
+<li>마지막 버전과 워킹트리의 차이점을 볼 수 있음.<br>
+Commit 전에 마지막 검토와 같은 기분.</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git reset --hard</code></p>
+<ul>
+<li>지금까지 작업한 내용이 사라짐. (마지막에 올린 커밋상태로 돌아감)</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git checkout</code></p>
+<ul>
+<li><code class="language-text">git checkout [커밋아이디]</code>
+<ul>
+<li>해당 커밋으로 돌아감 (과거로 돌아감)<br>
+이 작업할때, <strong>main</strong> Branch는 변경되지 않고, HEAD가 변경되는 것.<br>
+해왔던 Commit들이 사라지지 않으니 걱정말기!</li>
+</ul>
+</li>
+<li><code class="language-text">git checkout [Branch명]</code>
+<ul>
+<li>해당 Branch로 감.</li>
+<li>위에 커밋아이디를 써서 과거로 돌아갔을때에도<br>
+<em>git checkout [Branch명]</em> 하면 다시 최신으로 돌아올 수 있음.<br>
+예) <em>git checkout main</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git reset [모드] [커밋아이디]</code><br>
+여기선 <code class="language-text">git reset -hard [커밋아이디]</code></p>
+<ul>
+<li><em>[커밋아이디]</em> 시점으로 가겠다는 의미. <em>git checkout [커밋아이디]</em> 와는 다름</li>
+<li><em>reset</em> 의 경우 진짜 그 <em>[커밋아이디]</em> 로 감. <em>[커밋아이디]</em> 의 기준에서 후에 있는 모든게 제거됨.</li>
+<li>[모드]
+<ul>
+<li><code class="language-text">--hard</code><br>
+<em>[커밋아이디]</em> 의 기준에서 후에 있는 모든게 제거될 뿐만 아니라 현재 수정하고 있던 사항도 제거됨.</li>
+<li><code class="language-text">--soft</code> or <code class="language-text">--mixed</code><br>
+수정하고 있던 사항은 살릴 수 있음. 더 깊은 내용은 나중에 필요하면 찾아보기.</li>
+</ul>
+</li>
+<li><span style="color: red; font-weight: bold;">[!]</span> 협업을 할 때는, 다른 사람과 공유된 버전은 reset하면 안됨!<br>
+공유되기 전 버전만 reset해야 함. 안그러면 엉키는 문제가 발생하기 때문..</li>
+<li><code class="language-text">git reset --help</code>를 하면 <em>git reset</em> 의 상세설명을 볼 수 있음. (모드라던지..)</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">git revert [커밋아이디]</code></p>
+<ul>
+<li><em>git commit</em> 처럼 에디터가 실행됨.</li>
+<li>버전 되돌리기라 함</li>
+<li>git reset과 비슷하지만 차이가 있음. (내 생각)
+<ul>
+<li><code class="language-text">git reset</code>의 <em>[커밋아이디]</em> 기준 후에 있는 모든 사항을 제거한다 생각함.</li>
+<li><code class="language-text">git revert</code>는 <em>[커밋아이디]</em> 기준 후에 있는 모든 사항을 제거하지 않고, 그대로 보존하며,<br>
+<em>[커밋아이디]</em> 기준의 후가 아닌 바로 전으로 돌아가서 새로운 커밋을 만드는 기분.</li>
+</ul>
+</li>
+<li>아주 오래 전 사항으로 <em>revert</em> 를 하려면..
+<ul>
+<li>log의 <strong>역순으로 순차적 revert</strong>를 해줘야함. 안그러면 충돌!!</li>
+<li>그 이유는 <em>[커밋아이디]</em> 기준의 후에 있는 것을 git에선 어떻게해야하지? 이러기 때문.</li>
+<li><em>[커밋아이디]</em> 기준의 전으로 모든 변화를 되돌리는것이 아니라 <em>[커밋아이디]</em> 를 할 때의 변화만을 되돌리는 것이 git revert임.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>git의 커밋아이디는 너무 길어.. 이럴땐 <strong>Tag</strong>를 쓰는데 알아보기!</p>
+</li>
+</ul>
+<br/>
+<p><strong>요약 이미지</strong><br>
+<img src="https://user-images.githubusercontent.com/33610315/107745215-4d378a80-6d57-11eb-8e0c-e3ed43139144.png" alt="image"></p>
+<br/>
+<h2><strong>[3]</strong> GIT CLI - Branch &#x26; Conflict</h2>
+<h3><strong>1.</strong> Branch</h3>
+<ul>
+<li>브랜치는 나뭇가지의 가지라고 생각할 수 있음.<br>
+<em>브랜치란, 같은 뿌리에서 나왔지만 서로 다른 역사를 써가고있는 버전들을 말함</em></li>
+<li>이해를 위한 예시
+<ul>
+<li>서로 다른 작업본이 추가된 복제본이 필요할 수 있음.<br>
+어떤 회사의 제품 사용 설명서를 만드는 사람이라 한다면,<br>
+고객사가 없을 땐 새로운 작업만하면 되었지만, 고객사가 많아진다면…?<br>
+브랜치를 여러개 만들어서 관리하면 됨!</li>
+</ul>
+</li>
+<li><code class="language-text">git branch [브랜치명]</code>
+<ul>
+<li>브랜치 생성</li>
+</ul>
+</li>
+<li><code class="language-text">git checkout [브랜치명]</code>
+<ul>
+<li>현재 작업 브랜치에서 나와서 <em>[브랜치명]</em> 으로 작업 상태 변경 (스위칭)</li>
+</ul>
+</li>
+</ul>
+<h3><strong>2.</strong> Conflict (merge)</h3>
+<ul>
+<li>각기 다른 브랜치를 merge 할 때, 공통적인 분기를 <em>base</em> 라고 함.
+<ul>
+<li>각기 다른 브랜치를 merge 했다면 그건 <em>merge commit</em> 이라고 부름</li>
+</ul>
+</li>
+<li>각기 다른 브랜치를 merge 할 때 순서
+<ol>
+<li>기준이 되는 브랜치를 checkout</li>
+<li><code class="language-text">git merge [merge 할 브랜치명]</code>
+<ul>
+<li>merge 후 돌아가고 싶다면 <code class="language-text">git reset [커밋아이디]</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><em>merge</em> 시 각기 다른 브랜치에서 같은 파일을 수정했을 시,<br>
+내용 중 <span style="color: skyblue">같은 부분이 아니라면</span> 충돌(Conflict)이 일어나지 않음!<br>
+자동으로 서로 추가된 부분 내용을 병합해줌!</li>
+<li><em>merge</em> 시 각기 다른 브랜치에서 같은 파일을 수정했을 시,<br>
+<span style="color: magenta">같은 부분을 수정했다면</span>
+내용 중 충돌(<span style="color: red">Conflict</span>)이 일어남!
+<ul>
+<li>Conflict가 일어났을 경우 <code class="language-text">git status</code>로 상태를 본 후, 수동으로 문제되는 파일의 내용을 수정하기!!
+<ul>
+<li>수정 후 <code class="language-text">git add [파일명]</code>을 해주게되면, 문제되었던 파일을 수정했다고 git에 알려주는게 됨.</li>
+<li><code class="language-text">git add</code> 이후 <code class="language-text">git commit</code> 만 하기. <code class="language-text">git commit [메세지]</code>하면 Merge전용 메세지가 아닌 내가 설정한 메세지가 됨.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><strong>3.</strong> 3 way merge</h3>
+<ul>
+<li>
+<p><em>3 way merge</em> 를 이용하면 <em>2 way merge</em> 와 비교했을 때 훨씬 더 많은 부분을 자동화해서 병합해줄 수 있다!<br>
+<img src="https://user-images.githubusercontent.com/33610315/107774198-06ab5580-6d82-11eb-8843-d38e5c36d7ff.png" width="500px"><br/></p>
+</li>
+<li>
+<p>merge를 조금 더 편리하게 해줄 수 있는 프로그램은 <em>p4merge</em> 등이 있음.<br>
+사용하게되면, 검색해보기.</p>
+</li>
+</ul>
+<h3><strong>+</strong> 찾아 볼 정보들</h3>
+<ul>
+<li>git workflow
+<ul>
+<li>git flow (git flow 라는 프로그램도 있음)</li>
+</ul>
+</li>
+<li>cherry-pick 기능 (merge 관련)</li>
+<li>rebase<br>
+<em>merge</em> 와 목표 자체는 같지만, rebase를 이용하는 timeline은 훨씬 깔끔하게 할 수 있음.
+<ul>
+<li><em>merge</em> 는 각기 다른 브랜치를 서로 병합하지만<br>
+<em>rebase</em> 는 기준이 되는 브랜치에 다른 브랜치의 작업사항(버전)들을 이어붙이는 것임<br>
+효과는 merge와 비슷하지만 브랜치 자체를 합병하는건 아닌듯 함.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<h2><strong>[4]</strong> Git CLI - Backup</h2>
+<h3><strong>1.</strong> git hosting</h3>
+<p><em>git hosting</em> 서비스는 엄청 많지만, 그 중 대표적으로 GitHub와 GitLab을 비교하면<br>
+GitHub는 개인적인 비공개 Repository를 생성하려면 과금이 필요하지만, GitLab은 그렇지 않음.</p>
+<ul>
+<li><a href="https://git.wiki.kernel.org/index.php/GitHosting" target="_blank" rel="nofollow">다양한 Git Hosting 서비스 비교</a></li>
+</ul>
+<h3><strong>2.</strong> git repository</h3>
+<p><em>일부는 Pass함. (리포지토리 생성)</em></p>
+<ul>
+<li>git repository 생성 후 이미 존재하는 지역저장소를 원격저장소에 연결
+<ul>
+<li><code class="language-text">git remote add origin [HTTPS(.git) 주소]</code></li>
+<li>현재 remote가 잘 되었는지 체크<br>
+<code class="language-text">git remote</code><br>
+repository 닉네임만 나옴<br>
+<code class="language-text">git remote -v</code><br>
+<em>https .git 주소</em> 정보까지 다 나옴</li>
+</ul>
+</li>
+</ul>
+<h3><strong>2-1.</strong> git push</h3>
+<ul>
+<li><code class="language-text">git push [원격저장소 닉넴 or HTTPS(.git) 주소] [지역저장소 브랜치명]</code>
+<ul>
+<li>내가 기본적으로 사용했었던 Push 명령어 루틴.</li>
+</ul>
+</li>
+<li>repository를 생성하고 첫 <code class="language-text">git push</code>만을 입력했을 시 에러가 발생.
+<ul>
+<li>에러 발생 이유는 지역저장소가 여러 개의 원격저장소와 연결될 수 있는 데 어떤 원격저장소와 연결할 것인지.</li>
+<li>아래의 명령을 입력해주면 해결 (한번만 하면 됨!)<br>
+<code class="language-text">git push --set-upstream origin master</code>
+<ul>
+<li>위 명령어의 <code class="language-text">--set-upstream</code>는 그 다음부터 <code class="language-text">git push</code>만 입력하면<br>
+<code class="language-text">--set-upstream</code>옵션 뒤에 있는 단어 <code class="language-text">origin master</code>를 안써도 됨!<br>
+기본 값을 지정하는 느낌</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code class="language-text">git push -u [원격저장소 닉넴 or HTTPS(.git) 주소] [지역저장소 브랜치명]</code>
+<ul>
+<li>여기서 <code class="language-text">-u</code> 옵션은 지역저장소의 Branch와 원격저장소의 Branch를 연결 시켜줄 때 사용하는 옵션</li>
+<li>이미 만들어진 지역저장소를 원격저장소에 연결할 때 사용. 한번만 하면 됨.</li>
+</ul>
+</li>
+</ul>
+<h3><strong>2-2.</strong> git clone</h3>
+<ul>
+<li><code class="language-text">git clone [원격저장소 HTTPS(.git) 주소]</code>
+<ul>
+<li>원격저장소에 있는 repository를 현재 사용하고 있는 컴퓨터의 디렉토리에 지역저장소를 만듬 (복제)</li>
+</ul>
+</li>
+</ul>
+<h3><strong>2-3.</strong> git pull</h3>
+<ul>
+<li><code class="language-text">git pull</code>
+<ul>
+<li>원격저장소에 있는 최신 상태를 현재 사용하고 있는 컴퓨터의 지역저장소로 불러옴.<br>
+작업 시작 전에 무조건 git pull을 해주고 하는 것이 좋음.</li>
+</ul>
+</li>
+</ul>
+<h3><strong>+</strong> 찾아 볼 정보들</h3>
+<ul>
+<li>SSH<br>
+인증과 관련해서 원격저장소와 통신을 할 때마다 인증을 물어보면 불편..<br>
+SSH를 통해서 저장소 간의 통신하는 방법을 찾아보기.<br>
+SSH를 이용하면 자동으로 로그인 가능.</li>
+<li>git hosting들의 기능을 꼼꼼히 살펴보기.
+<ul>
+<li>Issue 트래커
+<ul>
+<li>프로젝트를 하면서 발생하는 문제를 기록할 수 있고,<br>
+각각의 문제에 대한 처리 상태를 마킹해서 처리해야 할 문제를 빠짐없이 체계적으로 관리할 수 있음.</li>
+<li>협업 기능과 트래커를 결합하게되면 업무를 분담해서 처리하는 강력한 도구로도 활용될 수 있음.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<h2><strong>[5]</strong> Git CLI - 협업</h2>
+<p>협업 시, 동시에 작업을 했을 때 생기는 지옥.. Conflict(충돌)들을 방지하는 방법을 학습함.</p>
+<h3><strong>1.</strong> Git Collaborator</h3>
+<ul>
+<li>원격저장소 파일은 누구나 다운 받을 수 있지만, 아무나 <code class="language-text">push</code>를 할 수 없음.<br>
+양쪽 다 승인을 해야지만 버전을 올릴 수 있음.</li>
+<li><em>Collaborator</em> 설정 (협업자 초대(추가))
+<ul>
+<li>설정하려는 원격저장소 (git repository)로 들어가고
+Settings 탭 클릭<br>
+▶ Collaborators &#x26; teams 클릭<br>
+▶ 맨 밑 Collaborators 란에 협업자를 추가.</li>
+<li>추가적으로 Permission level을 설정할 수 있음.</li>
+</ul>
+</li>
+</ul>
+<h3><strong>2.</strong> push &#x26; pull</h3>
+<ul>
+<li>협업한다는 가정하에 작성. (예시)
+<ul>
+<li>협업을 2명이서 할 시에, a는 작업 후 commit → push를 하였고,<br>
+b는 pull을 하지 않고 a와 같은 위치를 작업 후에 commit을 시도. 에러 발생.
+<ul>
+<li>이 경우, b는 pull을 한 후에 다시 commit하면 되지만, 충돌 발생 (같은 위치를 수정했기에)<br>
+mergetool을 이용하거나 직접 수정으로 충돌된 부분을 수정해준 뒤, add 해주고 commit!</li>
+<li>이제 2명 모두 작업을 원활하게 할 수 있음.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>최대한 작업을 빨리 끝내고 push를 자주해야지만 서로 충돌이 일어나지 않음</li>
+<li>작업할 때 반드시 pull을 통해서 다른사람이 업데이트한 게 있는지 체크 (꼭!)</li>
+<li>commit, push, pull를 자주하는 것이 커뮤니케이션을 활발하게하는데 도움을 줌.</li>
+</ul>
+<h3><strong>3.</strong> 원격 브랜치와 FETCH</h3>
+<ul>
+<li>보통 협업 시, 작업 할 때 <code class="language-text">git pull -> git commit -> git push</code> 이러한 루틴으로 흘러가는데,<br>
+<code class="language-text">git pull</code> 대신 <code class="language-text">git fetch -> git merge FETCH_HEAD -> git commit -> git push</code> 이러하게 작업을 할 수도 있음.
+<ul>
+<li><code class="language-text">git pull</code>은 <code class="language-text">git fetch</code> <strong>+</strong> <code class="language-text">git merge origin/master</code> 와 똑같은 효과를 보임.
+<ul>
+<li><code class="language-text">git fetch</code>는 <em>remote branch</em> 만 가져오는 것.</li>
+<li><code class="language-text">git merge origin/master</code>는 <em>remote branch</em> 를 <em>local remote branch</em> 랑 merge.</li>
+</ul>
+</li>
+<li><em>remote branch</em> 와 <em>local remote branch</em> 는 무엇??
+<ol>
+<li>remote branch
+<ul>
+<li><code class="language-text">git merge origin/master</code>에서 <code class="language-text">origin/master</code>의 <em>master</em> 브랜치를 뜻함.<br>
+<code class="language-text">origin/master</code> 이것은 [원격저장소 명/브랜치명]</li>
+</ul>
+</li>
+<li>local remote branch
+<ul>
+<li>이것은 현재 로컬에서 작업하고 있는 branch를 뜻함!</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>신중하게 git의 데이터를 pull하고 싶을 때 fetch를 사용하면 됨.</li>
+</ul>
+<h3><strong>+</strong> 기타 (만약 회사에 내가 Git을 추천 한다면?)</h3>
+<ul>
+<li>발표나 데모를 할 때 나한테 신기한 게 아니라 남이 신기해할 만한 걸 말하기.</li>
+<li>git 같은 걸 추천할 때는 5분 안에 끝내는 게 좋음. 최대한 익숙한 것처럼 포장해서 말하기.<br>
+ex) git은 Drop box 같은 것이지만, 수동으로 버전 관리를 할 수 있기에 아주 정교하게 작업이 가능하다.</li>
+<li>어려운 기능 얘기하지 말기.. 눈에 띄는 순간 어려워함.</li>
+<li>pull - commit - push를 최대한 짧게 하면 문제 생길 여지가 줄어든다.</li>
+<li>Conflict의 경우, 초반에만 서포트 해주기.</li>
+</ul>
+<p><strong>완벽함이란, 더 이상 더할 게 없는 것이 아니라 뺄 것이 없는 거다.</strong></p>
+<br/>
+<h2><strong>[6]</strong> GIT CLI - Cherry-pick &#x26; rebase</h2>
+<h3><strong>1.</strong> Cherry-pick</h3>
+<h4><strong>1)</strong> 사용법 및 개념</h4>
+<ul>
+<li>사용법<br>
+<code class="language-text">git cherry-pick [현재 브랜치에 다른 브랜치의 특정 부분의 커밋아이디]</code></li>
+<li>각기 다른 2개의 브랜치 중 기준이 되는 브랜치에 다른 브랜치를 Cherry-pick을 하려할 때,<br>
+Cherry-pick은 다른 브랜치의 버전(Commit)이 만들어졌을 때 당시에 Working Copy의 스냅샷 전체를 사용하겠다는 것이 아니고,<br>
+해당 버전이 생성될 때 생긴 변화만을 적용하겠다는 게 Cherry-Pick.</li>
+<li>체리픽은 변화를 가져오는 것. 그 버전이 생성될 때의 변화를 합쳐서 새로운 버전을 만들어내는 것.</li>
+<li>예시<br>
+<img src="https://user-images.githubusercontent.com/33610315/107872894-1f864900-6ef1-11eb-85df-e35076a77ce8.png" width="500"><br/>
+이 이미지에서 master 브랜치는 init, m1, m2 등의 파일을 가지고 있었음.<br>
+master 브랜치에 topic 브랜치에 있는 <em>t2</em> 를 Cherry-pick 함.<br>
+master 브랜치가 가지고 있는 파일은 init, m1, m2, <em>t2</em> 가 됨.</li>
+</ul>
+<h4><strong>2)</strong> 충돌의 원인과 해결</h4>
+<ul>
+<li>기준이 되는 브랜치에 다른 브랜치의 특정 부분을 Cherry-pick 할 때, 이 브랜치 2개 다 모두 같은 위치를 작업했었더라면, 충돌이 발생함.<br>
+이렇게 충돌이 발생했을 시, <strong>3 way merge</strong> 를 활용하여 해결한다 함.<br>
+(되도록 <em>mergetool</em> 을 사용하여 해결하기를. mergetool은 어느것이든 써도 됨. 여기선 Beyond Compare 사용)</li>
+<li>merge 충돌을 해결하고 난 뒤 git add -> git commit을 하는 것처럼<br>
+<em>cherry-pick</em> 은 <code class="language-text">git add -> git cherry-pick --continue</code> 해주기!</li>
+<li>추후 참고하여 필요할 때 추가 학습.<br>
+<a href="https://opentutorials.org/course/3843/24445" target="_blank" rel="nofollow">cherry-pick 충돌의 원인과 해결</a></li>
+</ul>
+<h3><strong>2.</strong> rebase</h3>
+<h4><strong>1)</strong> 사용법 및 개념</h4>
+<ul>
+<li>
+<p>각기 다른 브랜치가 각자 작업을 한 뒤에 지금은 갈래길 같은 느낌이지만, 이 갈래길을 하나로 이어붙이고 싶을 때, rebase를 사용한다 함.</p>
+</li>
+<li>
+<p>사용법<br>
+<code class="language-text">git checkout [rebase하려는 branch명]</code><br>
+<code class="language-text">git rebase [rebase되는 브랜치의 내용이 붙어질 branch명]</code></p>
+</li>
+<li>
+<p>예시</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">-----------------------------------------------------------------------------
+(1) rebase 전
+
+                        Master
+                [M1] -> [M2]
+                /
+[A] -> [B] -> [C]
+                \
+                [T1] -> [T2]
+                        Topic
+
+================================================
+
+(2) rebase 후
+
+[A] -> [B] -> [C]
+                \                          Master
+                [T1] -> [T2] ----▶ [M1] -> [M2]
+                        Topic
+
+-----------------------------------------------------------------------------
+# 위 그림은 master를 rebase해서 토픽으로 rebase를 하겠다.
+# master의 시작부분 버전이 master와 topic의 공통 조상인 부모 버전을 가르키는 게 아니라,
+# topic의 마지막 버전 뒤에 master의 시작부분을 이어붙임으로써, 말그대로 base를 바꾸겠다는 것이 rebase.</code></pre></div>
+<img src="https://user-images.githubusercontent.com/33610315/107873701-9cb4bc80-6ef7-11eb-8742-7497114aa591.png" width="500">
+</li>
+<li>
+<p><span style="color: red; font-weight: bold">[!]</span> 주의사항</p>
+<ul>
+<li>rebase를 할 수 있는 시기는 <em>rebase하려는 branch의 버전들</em> 이 push 되기 전에만!! push 된 이후에는 하면 안됨.<br>
+rebase된 버전들은 change는 같지만 working copy가 다르다 함. push되어있는데 rebase하면 엉망진창..!</li>
+<li>merge를 한 결과물과 rebase를 한 결과물은 과정만 다를 뿐 결과는 같아야 함!</li>
+</ul>
+</li>
+</ul>
+<h4><strong>2)</strong> 충돌의 원인과 해결</h4>
+<ul>
+<li>rebase는 느낌상 cherry-pick을 내부적으로 이용하는 듯한다 함. (cherry-pick을 많이 하는 느낌이랄까?)</li>
+<li>충돌이 발생했을 시, cherry-pick의 충돌 때처럼 <strong>3 way merge</strong> 를 활용하여 충돌 해결.<br>
+또한, mergetool을 사용하는게 편리함.</li>
+<li>cherry-pick 처럼 rebase는 충돌을 해결하고 난 뒤에, <code class="language-text">git add -> git rebase --continue</code></li>
+<li>충돌 발생 시, 어디에서 충돌이 났는지 확인하고 싶다면?<br>
+<code class="language-text">git am --show-current-patch</code> (patch는 change의 약자)</li>
+<li>추후 참고하여 필요할 때 추가 학습.<br>
+<a href="https://opentutorials.org/course/3843/24446" target="_blank" rel="nofollow">rebase 충돌의 원인과 해결</a><br>
+<a href="https://opentutorials.org/course/3843/24447" target="_blank" rel="nofollow">협업에서 rebase 이용하기</a> <em>(안 본 영상)</em><br>
+<br/></li>
+</ul>
+<h2><strong>[+]</strong> GIT 기타</h2>
+<ul>
+<li>gitconfig 내용 보는 법<br>
+<code class="language-text">vim ~/.gitconfig</code></li>
+<li>command line에서 각 명령마다 <strong>;</strong> (세미콜론)을 붙여서 연속으로 명령어를 실행할 수 있음.</li>
+</ul>
+<hr/>
+<h3><strong>참고 링크</strong></h3>
+<ul>
+<li><a href="https://opentutorials.org/course/3837" target="_blank" rel="nofollow">[생활코딩] Git 1</a></li>
+<li><a href="https://opentutorials.org/course/3839" target="_blank" rel="nofollow">[생활코딩] Git CLI - 버전관리</a></li>
+<li><a href="https://opentutorials.org/course/3840" target="_blank" rel="nofollow">[생활코딩] GIT CLI - Branch &#x26; Conflict</a></li>
+<li><a href="https://opentutorials.org/course/3841" target="_blank" rel="nofollow">[생활코딩] GIT CLI - Backup</a></li>
+<li><a href="https://opentutorials.org/course/3842" target="_blank" rel="nofollow">[생활코딩] GIT CLI - 협업</a></li>
+<li><a href="https://opentutorials.org/course/3843" target="_blank" rel="nofollow">[생활코딩] GIT CLI - Cherry-pick &#x26; rebase</a></li>
+<li><a href="https://stackoverflow.com/questions/1230084/how-to-have-git-log-show-filenames-like-svn-log-v" target="_blank" rel="nofollow">How to have git log show filenames like svn log -v</a></li>
+</ul></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1lmou780"></div><style data-emotion="css 195jetu">.css-195jetu{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-195jetu{grid-template-columns:1fr;width:100%;padding:50px 20px;}}</style><footer class="css-195jetu eakiay40"><p>Thank You for Visiting My Blog, Have a Good Day 😆</p><p>© 2021 Rano, Powered By Gatsby.</p></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/2021/2021-02-11-Git(Opentutorials)/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-65a907e51915b8b71475.js"],"app":["/app-cd6629c59e30b19b7535.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-ecd328fe6d40507b7df1.js"],"component---src-pages-custom-post-tsx":["/component---src-pages-custom-post-tsx-2fc2349107daa844432a.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-b8f8aece020039b9a81e.js"],"component---src-pages-portfolio-tsx":["/component---src-pages-portfolio-tsx-dbda97a054f822767681.js"]};/*]]>*/</script><script src="/polyfill-65a907e51915b8b71475.js" nomodule=""></script><script src="/component---src-pages-custom-post-tsx-2fc2349107daa844432a.js" async=""></script><script src="/120a60f1298cbb2056afbd1695e6f3165224b969-130fe9bcc7ce298cffac.js" async=""></script><script src="/cb1608f2-9aafed8d9b39d46f512d.js" async=""></script><script src="/app-cd6629c59e30b19b7535.js" async=""></script><script src="/framework-cc7022c8d9ab50daf3c0.js" async=""></script><script src="/webpack-runtime-89ec7ab2cf6b0bbd3ca3.js" async=""></script></body></html>
