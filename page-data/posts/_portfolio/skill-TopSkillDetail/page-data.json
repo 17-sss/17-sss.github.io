@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-custom-post-tsx",
+    "path": "/posts/_portfolio/skill-TopSkillDetail/",
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"id":"5396c13c-3053-5f8d-be17-6f38d2cdb7fb","fields":{"slug":"/_portfolio/skill-TopSkillDetail/"},"html":"<table>\n<thead>\n<tr>\n<th>HTML / CSS</th>\n<th>JavaScript</th>\n<th><b>React</b></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>웹 접근성을 고려하여 작성하도록 노력합니다.</td>\n<td>ES6 Classes 문법을 포함하여 ES6 이상 문법에 익숙합니다.</td>\n<td>Hooks API를 기반으로 작성할 수 있습니다</td>\n</tr>\n<tr>\n<td>BEM 방법론을 적용할 수 있습니다.</td>\n<td>webpack을 통한 개발환경을 구성할 수 있습니다.</td>\n<td>ContextAPI와 useReducer를 통한 상태관리, Recoil을 통해 상태관리를 할 수 있습니다.</td>\n</tr>\n<tr>\n<td>BootStrap, Material UI 등 CSS 라이브러리를 사용할 수 있습니다.</td>\n<td>Typescript를 사용할 수 있습니다.</td>\n<td>커스텀 훅을 작성하여 활용 할 수 있습니다.</td>\n</tr>\n</tbody>\n</table>","frontmatter":{"title":"","summary":null,"date":null,"categories":null,"options":{"isPortfolio":true,"hide":true},"thumbnail":null}}}]}},"pageContext":{"slug":"/_portfolio/skill-TopSkillDetail/"}},
+    "staticQueryHashes": ["1413268446","1479751003","1642645631","3590156278","3949884163","77750267","884297919"]}
